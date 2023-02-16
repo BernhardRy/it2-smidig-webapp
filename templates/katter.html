@@ -1,0 +1,15 @@
+{% extends "mal.html" %}
+{% block innhold %}
+<div id="katteGrid">
+    {% for katt in tilfeldigKatt1 %}
+        <div class="katt">
+            <img src="{{katt}}" alt="">
+        </div>
+    {% endfor %}
+    {% for katt in tilfeldigKatt2 %}
+        <div class="katt">
+            <img src="{{katt}}" alt="">
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

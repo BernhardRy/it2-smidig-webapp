@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(159, 159, 213);
+}
+
+#katteGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+img{
+    width: 80%;
+    height: 400px;
+}
+
+.katt{
+    width: 100%;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(62, 59, 56);
+    text-decoration: underline;
+}
