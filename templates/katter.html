@@ -3,13 +3,13 @@
 <div id="katteGrid">
     {% for katt in tilfeldigKatt1 %}
         <div class="katt">
-            <img src="{{katt}}" alt="">
+            <button><img src="{{katt['bilde']}}" alt=""></button>
         </div>
     {% endfor %}
-    {% for katt in tilfeldigKatt2 %}
+    <!-- {% for katt in tilfeldigKatt2 %}
         <div class="katt">
             <img src="{{katt}}" alt="">
         </div>
-    {% endfor %}
+    {% endfor %} -->
 </div>
 {% endblock %}

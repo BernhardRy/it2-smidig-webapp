@@ -13,7 +13,6 @@ def index():
 @app.route("/katter")
 def katter():
     tilfeldigKatt1 = hent_katte_bilde()
-    tilfeldigKatt2 = hent_katte_bilde()
-    return render_template("katter.html", tilfeldigKatt1=tilfeldigKatt1, tilfeldigKatt2=tilfeldigKatt2)
+    return render_template("katter.html", tilfeldigKatt1=tilfeldigKatt1)
 
 app.run(debug=True)
