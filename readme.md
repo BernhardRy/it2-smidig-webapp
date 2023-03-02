@@ -1,8 +1,10 @@
 # Navn på app her
 
-The CatBook
+Fant.no
 
-Skriv en kort beskrivelse av appen her  
+Skriv en kort beskrivelse av appen her
+
+Fant.no er en nettside som skal la brukeren kjøpe og selge brukte ting.
 
 - [Prosjektbeskrivelse](./prosjektbeskrivelse.md)
 
