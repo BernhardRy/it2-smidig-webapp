@@ -20,30 +20,33 @@ for i in drinker_usortert:
     ingredienser.append(midlertidig_ingredienser_drink)
 
 def hent_drinker():
-    drinkListe = list(drinker_sortert_dic.keys())
-    return drinker_sortert_dic
+    return list(drinker_sortert_dic)
 
 def hent_ingredienser_til_drink():
+    global randomtall
+    global drinkListe
+
     drinkListe = list(drinker_sortert_dic.keys())
-    randomtall = random.randint(0, len(drinkListe))
+    randomtall = random.randint(0, len(drinkListe) - 1)
     randomDrink = drinkListe[randomtall]
 
     return drinker_sortert_dic[randomDrink]
 
 def hent_riktig_drink():
-    # ingredienser = hent_ingredienser_til_drink()
-    return hent_drinker()
+    global randomtall
+    global drinkListe
+
+    return drinkListe[randomtall]
 
 def sjekk_vinn():
     alle_drinker = hent_drinker()
     print(alle_drinker)
     gjett_drink = input(f"Hvilken drink tror du bruker ingrediensene {hent_ingredienser_til_drink()}?\n")
-    # if drinker_sortert_dic[gjett_drink] == hent_ingredienser_til_drink:
-    #     print(f"Riktig svar!")
-    # else:
-    #     print("Feil svar")
-    print(drinker_sortert_dic[gjett_drink])
-    
-    
-# print(hent_drinker())
-sjekk_vinn()
+    if alle_drinker[int(gjett_drink)] == hent_riktig_drink():
+        print(f"Riktig svar!")
+        print(hent_riktig_drink())
+    else:
+        print("Feil svar")
+
+# print(hent_ingredienser_til_drink())
+# print(hent_riktig_drink())
