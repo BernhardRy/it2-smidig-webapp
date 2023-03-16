@@ -15,7 +15,7 @@ for i in drinker_usortert:
     for a in range(15):
         a += 1
         if not i["drinks"][0]["strIngredient"+str(a)] == None:
-            midlertidig_ingredienser_drink.append(i["drinks"][0]["strIngredient"+str(a)])
+                midlertidig_ingredienser_drink.append(i["drinks"][0]["strIngredient"+str(a)])
     drinker_sortert_dic[i["drinks"][0]["strDrink"]] = midlertidig_ingredienser_drink
     ingredienser.append(midlertidig_ingredienser_drink)
 
@@ -46,7 +46,7 @@ def sjekk_vinn():
         print(f"Riktig svar!")
         print(hent_riktig_drink())
     else:
-        print("Feil svar")
+        print(f"Feil svar, det var {hent_riktig_drink()}")
 
 # print(hent_ingredienser_til_drink())
-# print(hent_riktig_drink())
+print(sjekk_vinn())
