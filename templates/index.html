@@ -3,19 +3,11 @@
 <section>
     {% for drink in alle_drinker %}
         <p>{{drink}}</p>
-    {% endfor %}
-
-    {% for bilde in bilder %}
-        <img src="{{bilde}}" alt="">
+        <img class="{{drink}}" src="{{hent_json[drink][1][0]}}" alt="">
     {% endfor %}
 
     {% for ingrediens in hent_ingredienser %}
         <p>{{ingrediens}}</p>
     {% endfor %}
-
-    <form action="/drink" method="get">
-        <input autocomplete="off" autofocus name="name" placeholder="name" type="text">
-        <button type="submit">Svar</button>
-    </form>
 </section>
 {% endblock %}
