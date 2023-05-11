@@ -1,13 +1,30 @@
 {% extends "mal.html" %}
 {% block innhold %}
 <section>
-    {% for drink in alle_drinker %}
-        <p>{{drink}}</p>
-        <img class="{{drink}}" src="{{hent_json[drink][1][0]}}" alt="">
-    {% endfor %}
+    <p>{{poeng}}</p>
+    <h2>Ingredienser</h2>
+    <section id="ingrediens_boks">
+        <div id="ingredienser">
+            {% for ingrediens in hent_ingredienser %}
+                <p>{{ingrediens}}</p>
+            {% endfor %}
+        </div>
+    </section>
 
-    {% for ingrediens in hent_ingredienser %}
-        <p>{{ingrediens}}</p>
-    {% endfor %}
+    {% if not fasit == "" %}
+        <p>Riktig svar var {{fasit}}</p>
+    {% endif %}
+
+    <div id="drinker">
+        {% for drink in alle_drinker %}
+            <div id="drink">
+                <p class="drink_navn">{{drink}}</p>
+                <form action="/gjett/{{drink}}">
+                    <button type="submit"><img class="{{drink}}" src="{{hent_json[drink][1][0]}}" alt=""></button>
+                </form>
+            </div>
+
+        {% endfor %}    
+    </div>
 </section>
 {% endblock %}
