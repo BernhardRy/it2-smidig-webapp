@@ -22,26 +22,32 @@ h2{
 
 #drink{
     margin-bottom: 30px;
+    margin-left: 20%;
 }
 
 .drink_navn{
-    margin-left: 20px;
+    margin-left: 90px;
 }
 
 button{
-    width: 80%;
-    background-color: white;
+    width: 60%;
+    background-color: rgb(255, 255, 255);
     border: none;
 }
 
+form{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 img{
-    width: 100%;
+    width: 70%;
     border-radius: 20px;
     transition: 0.3s;
 }
 
 img:hover{
-    width: 100.5%;
+    width: 71%;
     transition: 0.3s;
 }
 

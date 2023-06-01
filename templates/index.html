@@ -1,7 +1,7 @@
 {% extends "mal.html" %}
 {% block innhold %}
 <section>
-    <p>{{poeng}}</p>
+    <p>Score: {{poeng}}</p>
     <h2>Ingredienser</h2>
     <section id="ingrediens_boks">
         <div id="ingredienser">
@@ -12,7 +12,7 @@
     </section>
 
     {% if not fasit == "" %}
-        <p>Riktig svar var {{fasit}}</p>
+        <p>Riktig svar var: {{fasit}}</p>
     {% endif %}
 
     <div id="drinker">
