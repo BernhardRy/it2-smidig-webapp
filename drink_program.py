@@ -23,7 +23,6 @@ class Drinks:
                 print("hade")
             
         for i in self._drinker_usortert:
-            # if i["drinks"][0]["strAlcoholic"] == "Alcoholic":
             self._drinker_sortert.append(i["drinks"][0]["strDrink"])
             bilder_og_ingredienser = []
             midlertidig_ingredienser_drink = []

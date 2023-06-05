@@ -2,6 +2,7 @@
 {% block innhold %}
 <section>
     <p>Score: {{poeng}}</p>
+    <p>High score: {{best_score}}</p>
     <h2>Ingredienser</h2>
     <section id="ingrediens_boks">
         <div id="ingredienser">
@@ -14,6 +15,13 @@
     {% if not fasit == "" %}
         <p>Riktig svar var: {{fasit}}</p>
     {% endif %}
+
+    {% if ditt_gjett == fasit %}
+        <p>Riktig!</p>
+    {% elif not ditt_gjett == fasit %}
+        <p>Feil! Start på nytt:)</p>
+    {% endif %}
+    
 
     <div id="drinker">
         {% for drink in alle_drinker %}
